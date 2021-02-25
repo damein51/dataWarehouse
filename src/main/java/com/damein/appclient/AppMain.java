@@ -1,4 +1,4 @@
-package com.damein;
+package com.damein.appclient;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
@@ -10,13 +10,13 @@ import java.io.UnsupportedEncodingException;
 import java.util.Random;
 
 /**
- * @program: hadoop2
- * @description:
- * @author: lidongmin
- * @create: 2021-02-25 10:31
+ * program: hadoop2
+ * description:
+ * Author: lidongmin
+ * create: 2021-02-25 10:31
  */
 @Slf4j
-public class appclient {
+public class AppMain {
 
 
     private static Random rand = new Random();
@@ -725,8 +725,10 @@ public class appclient {
 
         AppErrorLog appErrorLog = new AppErrorLog();
 
-        String[] errorBriefs = {"at cn.lift.dfdf.web.AbstractBaseController.validInbound(AbstractBaseController.java:72)", "at cn.lift.appIn.control.CommandUtil.getInfo(CommandUtil.java:67)"};        //错误摘要
-        String[] errorDetails = {"java.lang.NullPointerException\\n    " + "at cn.lift.appIn.web.AbstractBaseController.validInbound(AbstractBaseController.java:72)\\n " + "at cn.lift.dfdf.web.AbstractBaseController.validInbound", "at cn.lift.dfdfdf.control.CommandUtil.getInfo(CommandUtil.java:67)\\n " + "at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\\n" + " at java.lang.reflect.Method.invoke(Method.java:606)\\n"};        //错误详情
+        //错误摘要
+        String[] errorBriefs = {"at cn.lift.dfdf.web.AbstractBaseController.validInbound(AbstractBaseController.java:72)", "at cn.lift.appIn.control.CommandUtil.getInfo(CommandUtil.java:67)"};
+        //错误详情
+        String[] errorDetails = {"java.lang.NullPointerException\\n    " + "at cn.lift.appIn.web.AbstractBaseController.validInbound(AbstractBaseController.java:72)\\n " + "at cn.lift.dfdf.web.AbstractBaseController.validInbound", "at cn.lift.dfdfdf.control.CommandUtil.getInfo(CommandUtil.java:67)\\n " + "at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\\n" + " at java.lang.reflect.Method.invoke(Method.java:606)\\n"};
 
         //错误摘要
         appErrorLog.setErrorBrief(errorBriefs[rand.nextInt(errorBriefs.length)]);
